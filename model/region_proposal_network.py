@@ -58,6 +58,8 @@ class RegionProposalNetwork(nn.Module):
         normal_init(self.conv1, 0, 0.01)
         normal_init(self.score, 0, 0.01)
         normal_init(self.loc, 0, 0.01)
+        
+       # import:  ratios (list of floats): This is ratios of width to height of the anchors.
 
     def forward(self, x, img_size, scale=1.):
         """Forward Region Proposal Network.
